@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "DroidRun UPSC AI",
+  "version": "1.0",
+  "description": "Hackathon Edition: Full Syllabus Mapper",
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

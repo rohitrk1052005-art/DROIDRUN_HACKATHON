@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">  <style></style>
+    <style>
+        body { width: 360px; font-family: 'Segoe UI', sans-serif; background: #f8f9fa; padding: 0; margin: 0; }
+        .header { background: #1a237e; color: white; padding: 15px; text-align: center; }
+        .btn-scan { width: 90%; margin: 15px 5%; padding: 12px; background: #ff6f00; color: white; border: none; font-weight: bold; border-radius: 5px; cursor: pointer; }
+        .btn-scan:hover { background: #e65100; }
+        
+        #loader { display: none; text-align: center; margin: 20px; color: #666; }
+        
+        #result { display: none; padding: 15px; }
+        .tag { background: #e3f2fd; color: #1565c0; padding: 4px 8px; border-radius: 4px; font-weight: bold; font-size: 12px; }
+        .topic { margin-top: 8px; font-weight: bold; color: #333; }
+        
+        .section { background: white; padding: 10px; margin-top: 10px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .label { color: #d84315; font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px; }
+        
+        .mcq-opt { display: block; padding: 4px; font-size: 13px; color: #444; }
+        .ans-box { margin-top: 5px; background: #e8f5e9; color: #2e7d32; padding: 5px; font-size: 12px; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h3>🇮🇳 UPSC AI Agent</h3>
+    </div>
+
+    <button id="scanBtn" class="btn-scan">Analyze Selection</button>
+    <div id="loader">Processing... 🧠</div>
+
+    <div id="result">
+        <span id="gsPaper" class="tag">GS Paper ?</span>
+        <div id="topic" class="topic">Topic Name</div>
+        
+        <div class="section">
+            <div class="label">Relevance</div>
+            <div id="relevance" style="font-size: 13px; color: #555; margin-top: 4px;"></div>
+        </div>
+
+        <div class="section">
+            <div class="label">Prelims MCQ</div>
+            <div id="prelimsQ" style="font-weight: 500; font-size: 13px; margin: 5px 0;"></div>
+            <div id="prelimsOpts"></div>
+            <div id="prelimsAns" class="ans-box"></div>
+        </div>
+
+        <div class="section">
+            <div class="label">Mains Question</div>
+            <div id="mainsQ" style="font-size: 13px; font-style: italic; color: #333; margin-top: 5px;"></div>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
