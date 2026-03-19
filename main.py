@@ -7,7 +7,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
 
-API_KEY = "AIzaSyDa_fVYq0DyThAw4-ujzUq9Wk9mZ0XyuDc" 
+API_KEY = "enter your api key" 
 
 
 client = genai.Client(api_key=API_KEY)
